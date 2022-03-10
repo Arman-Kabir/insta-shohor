@@ -154,6 +154,10 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  // Problem 6.1 .repeated reported post problem solved.
+  document.getElementById("reported").innerHTML = `
+    <h1>Reported posts</h1> `;
+
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
