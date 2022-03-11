@@ -64,17 +64,41 @@
         <div class="row text-white">
             <div class="col-12 col-lg-4">
                 <p class="text-warning text-center">How does JS work ?</p>
-                <p class=""></p>
+                <p class="">As JS is an interpreted language , when we run a JS program,browser engine reads line by
+                    line from top to bottom and source code goes through several steps and gets executed. The first step
+                    is - our source code is received by browser engines(Chrome uses V8 engine) parser and checks code
+                    for syntactic errors line by line , throws error and stop execution if error found. After parsing
+                    the codes with no errors, v8 engine creates the data structure from our code called AST(Abstract
+                    Syntax Tree).When the Abstract Syntax Tree is created by the parser , the JS engine converts our
+                    code into the machine code(byte code) and send it to the system for execution . Finally, machine
+                    code or byte code run by the system and we see output in the browser .</p>
             </div>
 
             <div class="col-12 col-lg-4">
                 <p class="text-warning text-center">What does JS event loop do ?</p>
-                <p class=""></p>
+                <p class="">Event loop gives multi-threaded, non-blocking and asynchronous features to the
+                    single-threaded,synchronous JavaScript language. When Js engine executes , it creates execution
+                    centexts, pushes and pops functions to and from the call stack in the execution phase.When a
+                    function takes a long time to execute its called blocking function and blocking function blocks all
+                    the next interactions on the page resulting in page hangs.Event loop solves this issue by placing
+                    these blocking functions into a queue called a callback queue.Event loop is a constantly running
+                    process that keeps track of callstack and callback queue.When the queued function gets completed or
+                    execution time matches event loop places the function into the callstack and function gets executed.
+                    Thus event loop coordinates between the callstack and callback queue to achieve concurrency and
+                    makes the program non-blocking,asynchronous.</p>
             </div>
 
             <div class="col-12 col-lg-4">
                 <p class="text-warning text-center">localStorage vs sessionStorage</p>
-                <p class=""></p>
+                <p class="">HTML5 Web Storage API is better than cookies because of large amount of storage limit(web
+                    storage 5 MB cookie 4KB) and information is never transferred to the server. Web Storage API gives
+                    two Objects for storing data - localStorage and sessionStorage with having similarities and
+                    diffencnces between them. localStorage stores data with no expiration date means data is not lost
+                    when the browser is closed and data is kept until someone deletes it or clears cache. sessionStorage
+                    stores data for only one session means data is lost when the user closes the browser or browser tab.
+                    Both has four methods - getItem(), setItem, removeItem(), clear(). Uses is - If u want to save a
+                    login username and password, it's better to use sessionStorage over localStorage. And again if u
+                    want to save a user's settings on their machine, it's better to use localStorage.</p>
             </div>
         </div>
 
